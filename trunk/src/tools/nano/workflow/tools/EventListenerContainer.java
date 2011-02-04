@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tools.nano.workflow.model.execution.EventListener;
-import tools.nano.workflow.model.execution.ExecutionContext;
 
 public class EventListenerContainer {
 	
@@ -21,7 +20,7 @@ public class EventListenerContainer {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public void fireNotify(ExecutionContext context) throws Exception{
+	public void fireNotify(Object context) throws Exception{
 		if(lisnteners != null){
 			for (EventListener listener : lisnteners) {
 				listener.notify(context);
