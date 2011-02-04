@@ -3,7 +3,6 @@ package tools.nano.workflow.model;
 import java.util.List;
 
 import tools.nano.workflow.model.execution.EventListener;
-import tools.nano.workflow.model.execution.ExecutionContext;
 import tools.nano.workflow.model.execution.HasStartEventListener;
 import tools.nano.workflow.tools.EventListenerContainer;
 
@@ -30,7 +29,7 @@ public abstract class AbstractProcessElement implements HasStartEventListener {
 	}
 	
 	@Override
-	public void fireStartNotify(ExecutionContext context) throws Exception{
+	public void fireStartNotify(Object context) throws Exception{
 		eventListenerContainer.fireNotify(context);
 	}
 	

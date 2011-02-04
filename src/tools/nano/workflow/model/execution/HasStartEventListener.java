@@ -8,7 +8,7 @@ public interface HasStartEventListener {
 	void addStartListener(EventListener eventListener);
 	
 	
-	void fireStartNotify(ExecutionContext context) throws Exception;
+	void fireStartNotify(Object context) throws Exception;
 	
 	@SuppressWarnings("unchecked")
 	List<EventListener> getListeners();

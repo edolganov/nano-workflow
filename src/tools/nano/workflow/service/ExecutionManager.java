@@ -10,21 +10,20 @@ import tools.nano.workflow.model.End;
 import tools.nano.workflow.model.Process;
 import tools.nano.workflow.model.State;
 import tools.nano.workflow.model.Transition;
-import tools.nano.workflow.model.execution.ExecutionContext;
 
 public class ExecutionManager {
 	
 	Process process;
-	ExecutionContext context;
+	Object context;
 	Log log;
 	StringBuilder processLog = null;
 	String logHeader;
 	
-	public ExecutionManager(Process process, ExecutionContext context) {
+	public ExecutionManager(Process process, Object context) {
 		this(process, context, null,null);
 	}
 	
-	public ExecutionManager(Process process, ExecutionContext context, Log log, String logHeader) {
+	public ExecutionManager(Process process, Object context, Log log, String logHeader) {
 		super();
 		this.process = process;
 		this.context = context;

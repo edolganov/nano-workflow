@@ -4,7 +4,6 @@ import java.util.List;
 
 import tools.nano.workflow.model.execution.DecisionHandler;
 import tools.nano.workflow.model.execution.EventListener;
-import tools.nano.workflow.model.execution.ExecutionContext;
 
 
 public class Decision extends AbstractInProcessElement {
@@ -22,7 +21,7 @@ public class Decision extends AbstractInProcessElement {
 	}
 
 	@SuppressWarnings("unchecked")
-	public String getTransition(ExecutionContext context) throws Exception {
+	public String getTransition(Object context) throws Exception {
 		if(handler == null) throw new IllegalStateException("no handler for decision "+this);
 		return handler.decide(context);
 	}
