@@ -13,7 +13,6 @@ import org.xml.sax.XMLReader;
 
 import com.thoughtworks.xstream.XStream;
 
-import ru.dz.metashop.common.utils.ObjectToXMLConverter;
 import ru.dz.tools.bpm.xml.model.DecisionElem;
 import ru.dz.tools.bpm.xml.model.EndCancelElem;
 import ru.dz.tools.bpm.xml.model.EndElem;
